@@ -1,0 +1,24 @@
+@import '../../../../styles/colors';
+@import '../../../../styles/globals';
+
+.search-field {
+  width: calc(100% - 24px);
+  height: calc(100% - 6px);
+  background: none;
+  border: none;
+  color: $c-grey-100;
+  margin-left: 1px;
+  border-radius: 2px;
+  padding-top: 3px;
+  font-weight: 300;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px;
+
+  &:focus,
+  &:active {
+    outline: none;
+    border-color: $c-blue-400;
+  }
+}
+
+

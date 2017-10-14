@@ -1,0 +1,66 @@
+@import '../../../../styles/globals';
+@import '../../../../styles/colors';
+
+.search-result-status-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $search-result-height - 16px;
+  height: $search-result-height;
+
+  .search-result-status {
+    position: relative;
+    width: 22px;
+    height: 22px;
+    border-radius: 22px;
+
+    &:after,
+    &:before {
+      position: absolute;
+      font-family: FontAwesome;
+      font-size: 11px;
+      transition: color 200ms ease;
+      color: $c-grey-400;
+    }
+
+    &.available {
+      background: $c-green-400;
+
+      &:after {
+        content: '\f00c';
+        top: 6px;
+        left: 6px;
+      }
+    }
+
+    &.reserved {
+      background: $c-red-400;
+
+      &:after {
+        content: '\f05e';
+        top: 6px;
+        left: 6.5px;
+      }
+    }
+
+    &.person {
+      background: $c-blue-400;
+
+      &:after {
+        content: '\f2c0';
+        top: 5.5px;
+        left: 6.5px;
+      }
+    }
+
+    &.unknown {
+      background: $c-grey-200;
+
+      &:after {
+        content: '\f128';
+        top: 5.5px;
+        left: 8px;
+      }
+    }
+  }
+}

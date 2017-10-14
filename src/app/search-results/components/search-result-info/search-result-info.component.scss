@@ -1,0 +1,23 @@
+@import '../../../../styles/globals';
+@import '../../../../styles/colors';
+
+.search-result-info {
+  margin-left: 8px;
+
+  .search-result-header,
+  .search-result-detail {
+    color: $c-grey-100;
+    font-weight: 300;
+    transition: color 200ms ease;
+  }
+
+  .search-result-header {
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .search-result-detail {
+    font-size: 13px;
+    margin: 1px 0 0;
+  }
+}

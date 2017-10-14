@@ -1,0 +1,11 @@
+@import '../../../../styles/colors';
+@import '../../../../styles/globals';
+
+.dock-brand {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: $c-grey-100;
+  font-size: 24px;
+  font-weight: 100;
+  padding: 8px 0 0 8px;
+  text-align: left;
+}

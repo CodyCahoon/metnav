@@ -1,0 +1,17 @@
+@import '../../../../styles/colors';
+@import '../../../../styles/globals';
+
+.dock-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $dock-height;
+  background: $c-grey-400;
+  display: flex;
+  justify-content: flex-end;
+
+  mn-dock-brand {
+    flex-grow: 1;
+  }
+}

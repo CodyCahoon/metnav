@@ -1,0 +1,38 @@
+@import '../../../../styles/colors';
+@import '../../../../styles/globals';
+
+.search-result {
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: $c-white;
+  background-color: $c-grey-400;
+  height: $search-result-height;
+  width: 100%;
+  margin: 0 0 1px;
+  padding: 4px 8px;
+  transition: margin 225ms ease, transform 225ms ease;
+  cursor: default;
+
+  &:hover {
+    transform: scale(1.05, 1.05) translateX(-11px);
+    margin: 2px 0 3px;
+
+    ::ng-deep {
+
+      .search-result-info {
+        .search-result-header,
+        .search-result-detail {
+          font-weight: 400;
+          color: $c-white;
+        }
+      }
+
+      .search-result-availability {
+        color: $c-white;
+        font-weight: 400;
+      }
+    }
+  }
+}

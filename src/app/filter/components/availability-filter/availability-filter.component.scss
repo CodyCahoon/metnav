@@ -1,0 +1,35 @@
+@import '../../../../styles/colors';
+@import '../../../../styles/globals';
+
+.filter {
+
+
+  &.available-filter {
+    &.applied {
+      &:after {
+        background-color: $c-green-400;
+        height: 4px;
+      }
+
+      .filter-icon,
+      .filter-label {
+        color: $c-green-400;
+      }
+    }
+  }
+
+  &.reserved-filter {
+    &.applied {
+      &:after {
+        background-color: $c-red-400;
+        height: 4px;
+      }
+
+      .filter-icon,
+      .filter-label {
+        color: $c-red-400;
+      }
+    }
+  }
+}
+

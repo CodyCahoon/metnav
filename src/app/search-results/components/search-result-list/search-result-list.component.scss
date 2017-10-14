@@ -1,0 +1,27 @@
+@import '../../../../styles/globals';
+
+$list-height: $dock-height + 2px;
+
+.search-result-list {
+  display: flex;
+  position: fixed;
+  top: $dock-height + 1px;
+  right: 0;
+  height: calc(100% - #{$list-height});
+  width: $search-width;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-left: 24px;
+  transition: width 200ms ease;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $mq-width-large) {
+  .search-result-list {
+    width: $mql-search-width;
+  }
+}

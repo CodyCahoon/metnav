@@ -1,0 +1,19 @@
+@import '../../../../styles/colors';
+@import '../../../../styles/globals';
+
+.search-button {
+  width: 40px;
+  border: none;
+  height: 100%;
+  margin-top: -1px;
+  padding-left: 0;
+  font-size: 14px;
+  color: $c-grey-100;
+  border-radius: 2px;
+  background: none;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}

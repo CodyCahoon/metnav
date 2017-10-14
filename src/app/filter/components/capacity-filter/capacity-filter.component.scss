@@ -1,0 +1,26 @@
+@import '../../../../styles/colors';
+@import '../../../../styles/globals';
+
+.capacity-filter {
+  .filter-icon {
+    padding-left: 8px;
+    font-size: 13px;
+  }
+
+  .capacity-amount {
+    background: none;
+    color: $c-grey-200;
+    font-size: 14px;
+    border: none;
+    transition: color 200ms ease;
+    width: 28px;
+    padding-left: 4px;
+
+    &:active,
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid $c-blue-400;
+      color: $c-blue-400;
+    }
+  }
+}
