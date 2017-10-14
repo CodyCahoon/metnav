@@ -11,7 +11,7 @@ import {AvailabilityFilterType} from '../../model/AvailabilityFilterType';
       <i class="filter-icon {{ filterIcon }}"></i>
     </div>
   `,
-  styleUrls: ['./availability-filter.component.scss', '../styles/filters.scss']
+  styleUrls: ['./availability-filter.component.scss', '../../styles/filters.scss']
 })
 export class AvailabilityFilterComponent implements OnInit {
   @Input() filterType: AvailabilityFilterType;

@@ -1,26 +1,52 @@
 @import '../../../../styles/colors';
 @import '../../../../styles/globals';
 
-.capacity-filter {
-  .filter-icon {
-    padding-left: 8px;
-    font-size: 13px;
-  }
+.filter {
+  &.capacity-filter {
+    .filter-icon {
+      padding-left: 4px;
+      padding-bottom: 3px;
+      font-size: 13px;
+      margin-right: 26px;
+    }
 
-  .capacity-amount {
-    background: none;
-    color: $c-grey-200;
-    font-size: 14px;
-    border: none;
-    transition: color 200ms ease;
-    width: 28px;
-    padding-left: 4px;
+    .capacity-amount {
+      background: none;
+      color: $c-grey-200;
+      font-size: 14px;
+      border: none;
+      transition: color 200ms ease;
+      width: 32px;
+      text-align: right;
 
-    &:active,
-    &:focus {
-      outline: none;
-      border-bottom: 1px solid $c-blue-400;
-      color: $c-blue-400;
+      &.active,
+      &:before,
+      &:focus {
+        outline: none;
+        color: $c-blue-400;
+      }
+
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+
+    &.applied,
+    &.active {
+      &:after,
+      &:before {
+        background-color: $c-blue-400;
+        height: 3px;
+      }
+
+      .filter-icon,
+      .filter-label,
+      .capacity-amount {
+        color: $c-blue-400;
+      }
     }
   }
 }
+

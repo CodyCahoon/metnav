@@ -3,12 +3,12 @@
 
 .filter {
 
-
   &.available-filter {
     &.applied {
-      &:after {
+      &:after,
+      &:before {
         background-color: $c-green-400;
-        height: 4px;
+        height: 3px;
       }
 
       .filter-icon,
@@ -20,9 +20,10 @@
 
   &.reserved-filter {
     &.applied {
-      &:after {
+      &:after,
+      &:before {
         background-color: $c-red-400;
-        height: 4px;
+        height: 3px;
       }
 
       .filter-icon,
