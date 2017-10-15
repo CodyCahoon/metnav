@@ -6,6 +6,7 @@ import {SearchResultComponent} from '../search-results/components/search-result/
 import {SearchResultInfoComponent} from '../search-results/components/search-result-info/search-result-info.component';
 import {SearchResultListComponent} from '../search-results/components/search-result-list/search-result-list.component';
 import {SearchResultStatusComponent} from '../search-results/components/search-result-status/search-result-status.component';
+import {CoreModule} from '../core/core.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {SearchResultStatusComponent} from '../search-results/components/search-r
     SearchResultStatusComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    CoreModule
   ]
 })
 export class SearchResultsModule {

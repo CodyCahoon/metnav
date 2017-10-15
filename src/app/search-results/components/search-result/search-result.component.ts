@@ -1,13 +1,15 @@
-import {animate, Component, Input, style, transition, trigger} from '@angular/core';
+import {animate, Component, Input, OnInit, style, transition, trigger} from '@angular/core';
 import {ISearchResult} from '../../model/ISearchResult';
+import {Room} from '../../../core/model/Room';
+import {RoomStatus} from '../../../core/model/RoomStatus';
 
 @Component({
   selector: 'mn-search-result',
   template: `
     <div class="search-result" [@fadeInOut]>
-      <mn-search-result-status [status]="searchResult.status"></mn-search-result-status>
-      <mn-search-result-info [searchResult]="searchResult"></mn-search-result-info>
-      <mn-search-result-availability [searchResult]="searchResult"></mn-search-result-availability>
+      <mn-search-result-status [status]="room.status"></mn-search-result-status>
+      <mn-search-result-info [room]="room"></mn-search-result-info>
+      <mn-search-result-availability [availability]="roomAvailability"></mn-search-result-availability>
     </div>
   `,
   styleUrls: ['./search-result.component.scss'],
@@ -32,6 +34,12 @@ import {ISearchResult} from '../../model/ISearchResult';
     ])
   ]
 })
-export class SearchResultComponent {
-  @Input() searchResult: ISearchResult;
+export class SearchResultComponent implements OnInit {
+  @Input() room: Room;
+  roomAvailability: string;
+
+  ngOnInit(): void {
+    this.roomAvailability = '10:00am to 12:00pm';
+  }
+
 }

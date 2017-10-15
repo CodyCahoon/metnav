@@ -14,6 +14,10 @@
   .search-result-header {
     font-size: 15px;
     margin: 0;
+    max-width: 120px;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 
   .search-result-detail {

@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {SearchResultStatus} from '../../model/SearchResultStatus';
+import {RoomStatus} from '../../../core/model/RoomStatus';
 
 @Component({
   selector: 'mn-search-result-status',
@@ -8,7 +8,6 @@ import {SearchResultStatus} from '../../model/SearchResultStatus';
             <span class="search-result-status"
                   [ngClass]="{'available': isAvailable(status),
                                 'reserved': isReserved(status),
-                                'person': isPerson(status),
                                 'unknown': isUnknown(status)}">
             </span>
     </div>
@@ -17,25 +16,21 @@ import {SearchResultStatus} from '../../model/SearchResultStatus';
 })
 export class SearchResultStatusComponent {
 
-  @Input() status: SearchResultStatus;
+  @Input() status: RoomStatus;
 
-  isAvailable(status: SearchResultStatus): boolean {
-    return this.isStatus(status, SearchResultStatus.Available);
+  isAvailable(status: RoomStatus): boolean {
+    return this.isStatus(status, RoomStatus.Available);
   }
 
-  isReserved(status: SearchResultStatus): boolean {
-    return this.isStatus(status, SearchResultStatus.Reserved);
+  isReserved(status: RoomStatus): boolean {
+    return this.isStatus(status, RoomStatus.Reserved);
   }
 
-  isPerson(status: SearchResultStatus): boolean {
-    return this.isStatus(status, SearchResultStatus.Person);
+  isUnknown(status: RoomStatus): boolean {
+    return this.isStatus(status, RoomStatus.Unknown);
   }
 
-  isUnknown(status: SearchResultStatus): boolean {
-    return this.isStatus(status, SearchResultStatus.Unknown);
-  }
-
-  private isStatus(status: SearchResultStatus, expectedStatus: SearchResultStatus): boolean {
+  private isStatus(status: RoomStatus, expectedStatus: RoomStatus): boolean {
     return status === expectedStatus;
   }
 }
