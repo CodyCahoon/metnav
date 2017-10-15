@@ -1,6 +1,5 @@
-import {Component, Input} from '@angular/core';
+import {animate, Component, Input, style, transition, trigger} from '@angular/core';
 import {ISearchResult} from '../../model/ISearchResult';
-import {style, state, animate, transition, trigger} from '@angular/core';
 
 @Component({
   selector: 'mn-search-result',

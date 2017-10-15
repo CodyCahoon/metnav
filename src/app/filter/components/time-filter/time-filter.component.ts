@@ -19,5 +19,4 @@ import {Component} from '@angular/core';
 export class TimeFilterComponent {
   filterLabel = 'Start Time';
   time = new Date();
-  
 }
